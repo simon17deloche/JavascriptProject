@@ -21,9 +21,14 @@
 
 /* Police d'écriture pour le "LOGO" */
 .header a.logo {
-    font-size: 25px;
+    font-size: 60px;
+    color: lightcyan;
     font-weight: bold;
-    image-resolution: 200px, 200px;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Mali', cursive;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Rubik Wet Paint', cursive;
 }
 
 /* Définition de la couleur de base des boutons à l'affichage */
