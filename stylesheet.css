@@ -1,4 +1,4 @@
-/* Style the header with a grey background and some padding */
+/* Définition couleur et image de fond pour le header */
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -6,7 +6,7 @@
     background-image: url("images/image2.jpg");
 }
 
-/* Style the header links */
+/* Définition des couleur et placement pour le header */
 .header a {
     float: left;
     color: black;
@@ -23,9 +23,10 @@
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
+    image-resolution: 200px, 200px;
 }
 
-/* Définition de la couleur de base des boutons à l'affichage*/
+/* Définition de la couleur de base des boutons à l'affichage */
 .header a.bouton {
     background-color: #3366ff;
     color: white;
@@ -33,25 +34,25 @@
     padding-left: 20px;
 }
 
-/* Changer la couleur des boutons quand on passe la souris dessus*/
+/* Changer la couleur des boutons quand on passe la souris dessus */
 .header a.bouton:hover {
-    background-color: lightgreen;
+    background-color: #6DA34D;
     color: white;
     padding-right: 20px;
     padding-left: 20px;
 }
 
-/* Float the link section to the right */
+/* Fixe les boutons en haut à droite */
 .header-right {
     float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 550px) {
+/* Ajout d'une média query pour rendre responsive le site pour les téléphones en dessous de 550 pixels (qui centre les boutons) */
+@media all and (max-width: 550px) {
     .header a {
         float: none;
         display: block;
-        text-align: left;
+        text-align: center;
     }
 
     .header-right {
@@ -59,19 +60,19 @@
     }
 }
 
-/* Page content */
+/* Contenu de la page */
 .content {
     padding: 16px;
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
+/* Position sticky pour le Header */
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+/*  */
 .sticky+.content {
     padding-top: 102px;
 }
