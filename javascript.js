@@ -44,14 +44,17 @@ function createList(list) {
     let container = document.createElement("div");
     container.classList.add("container");
     container.classList.add("card");
+
     let titre = document.createElement("h3");
     titre.innerText = list.title;
+    
     let img = document.createElement("img");
     img.setAttribute("src", list.imageUrl);
-    titre.innerText = list.title;
+    
+    let cible = document.getElementById("testeur");
+
     container.appendChild(titre);
     container.appendChild(img);
-    let cible = document.getElementById("testeur");
     cible.appendChild(container); 
     return 
 }
