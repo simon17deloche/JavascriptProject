@@ -39,7 +39,6 @@ async function start() {
 
 start()
 
-
 function createList(list) {
     let container = document.createElement("div");
     container.classList.add("container");
@@ -47,7 +46,7 @@ function createList(list) {
 
     let titre = document.createElement("h3");
     titre.innerText = list.title;
-    
+
     let img = document.createElement("img");
     img.setAttribute("src", list.imageUrl);
     
