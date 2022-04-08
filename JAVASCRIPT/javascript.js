@@ -29,33 +29,33 @@
 //})
 
 async function start() {
-    const response = await fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit=10")
-    const data = await response.json();
-    for (let i = 0; i < data.length; i++) {
-        createList(data[i]);
-    }
-  
+  const response = await fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit=10")
+  const data = await response.json();
+  for (let i = 0; i < data.length; i++) {
+    createList(data[i]);
+  }
+
 }
 
 start()
 
 function createList(list) {
-    let container = document.createElement("div");
-    container.classList.add("container");
-    container.classList.add("card");
+  let container = document.createElement("div");
+  container.classList.add("container");
+  container.classList.add("card");
 
-    let titre = document.createElement("h3");
-    titre.innerText = list.title;
+  let titre = document.createElement("h3");
+  titre.innerText = list.title;
 
-    let img = document.createElement("img");
-    img.setAttribute("src", list.imageUrl);
-    
-    let cible = document.getElementById("testeur");
+  let img = document.createElement("img");
+  img.setAttribute("src", list.imageUrl);
 
-    container.appendChild(titre);
-    container.appendChild(img);
-    cible.appendChild(container); 
-    return 
+  let cible = document.getElementById("testeur");
+
+  container.appendChild(titre);
+  container.appendChild(img);
+  cible.appendChild(container);
+  return
 }
 
 //         document.getElementById("testeur").innerHTML = `
@@ -65,7 +65,7 @@ function createList(list) {
 //         return `<div class="card"><h2>${list.title}</h2>
 //         <img src="${list.imageUrl}" alt="photo chien"></div>`
 //     }).join('')}
-        
+
 //     `
 // }
 
@@ -81,19 +81,19 @@ function createList(list) {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
-  } 
+  }
+} 

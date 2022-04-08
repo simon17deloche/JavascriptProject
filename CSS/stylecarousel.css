@@ -1,94 +1,97 @@
 /* Définition couleur et image de fond pour le header */
 .header {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-    background-image: url("/images/image2.jpg");
-    top: 0;
-    position: sticky;
-    width: 100%
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  background-image: url("/images/image2.jpg");
+  top: 0;
+  position: sticky;
+  width: 100%
 }
 
 /* Définition des couleur et placement pour le header */
 .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 
 }
 
 /* Police d'écriture pour le "LOGO" */
 .header a.logo {
-    font-size: 60px;
-    color: lightcyan;
-    font-weight: bold;
-    font-family: 'Karla', sans-serif;
-    font-family: 'Mali', cursive;
-    font-family: 'Mukta', sans-serif;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Rubik Wet Paint', cursive;
+  font-size: 60px;
+  color: lightcyan;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Mali', cursive;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Rubik Wet Paint', cursive;
 }
 
 /* Définition de la couleur de base des boutons à l'affichage */
 .header a.bouton {
-    background-color: #3366ff;
-    color: white;
-    padding-right: 20px;
-    padding-left: 20px;
+  background-color: #3366ff;
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* Changer la couleur des boutons quand on passe la souris dessus */
 .header a.bouton:hover {
-    background-color: #6DA34D;
-    color: white;
-    padding-right: 20px;
-    padding-left: 20px;
+  background-color: #6DA34D;
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* Fixe les boutons en haut à droite */
 .header-right {
-    float: right;
+  float: right;
 }
 
 /* Ajout d'une média query pour rendre responsive le site pour les téléphones en dessous de 550 pixels (qui centre les boutons) */
 @media all and (max-width: 550px) {
-    .header a {
-        float: none;
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  .header a {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-    .header-right {
-        float: none;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
+  .header-right {
+    float: none;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box
+}
 
-/* Slideshow container */
+/* Le bloc qui contient les images du Carrousel */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  justify-content: center;
+  max-width: 1000px;              /* Taille du bloc en pixels */
+  position: relative;             /* Placement du bloc */
+  margin: auto;                   /* Ne pas oublier de les modifier pour le responsive */
+  justify-content: center;        /* Garder le bloc au milieu de la page */
 }
 
-/* Hide the images by default */
+/* Affiche la première image par défaut */
 .mySlides {
   display: none;
   justify-content: center;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+/* Flêches de navigation pour changer d'image */
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -103,18 +106,19 @@
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Position du bouton "Suivant" du carrousel */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.255);
+/* Ajout d'une couleur de background quand la souris passe sur les flêches */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.255);
 }
 
-/* Caption text */
+/* Textes situés sur chaque image du carrousel */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -125,7 +129,7 @@
   text-align: center;
 }
 
-/* The dots/bullets/indicators */
+/* Modifitcations des boutons en dessous des images du carrousel */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -137,27 +141,33 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Animation de fondu à chaque transition d'image */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 .test {
-    justify-content: center;
-    width:700px;
-    height: 440px;
+  justify-content: center;
+  width: 700px;
+  height: 440px;
 }
 
 .space {
-    margin-top: 50px;
+  margin-top: 50px;
 }
