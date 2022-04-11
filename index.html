@@ -3,7 +3,7 @@
 <head>
   <link href="/CSS/stylesheet.css" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="/JAVASCRIPT/javascript.js"></script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,34 +33,31 @@
   </div>
   <div>
     <div class="ccontainer resp">
-      <form methode="" action="">
+      <form>
         <div class="row">
           <div class="col-25">
-            <label for="title"><strong>Titre</strong></label>
+            <label for="fname"><strong>Titre</strong></label>
           </div>
           <div class="col-75">
-            <input type="text" id="title" name="title" placeholder="Mettez votre titre ici">
+            <input type="text" class="title" name="titre" value="" >
           </div>
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="link"><strong>Lien de votre image</strong></label>
+            <label for="lname"><strong>Lien de votre image</strong></label>
           </div>
           <div class="col-75">
-            <input type="text" id="link" name="link" placeholder="Mettez votre lien ici">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-75">
+            <input type="text" id="link" name="lien_image" value="" >
           </div>
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="text"><strong>Description</strong></label>
+            <label for="email"><strong>Description</strong></label>
           </div>
           <div class="col-75">
-            <textarea id="text" name="text" placeholder="Faites votre description ici" style="height:100px"></textarea>
+            <input type="text" id="desc" name="description" value=""></input>
           </div>
+          <h3 id="te"></h3>
         </div>
         <div class="row">
           <input type="submit" value="Envoyer !">
@@ -73,5 +70,7 @@
   <div class="footer">
     <p>2022 - Alps Ascensionniste</p>
   </div>
+
+  <script src="/JAVASCRIPT/javascript.js"></script>
 </body>
 </html>

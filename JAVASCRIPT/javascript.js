@@ -1,16 +1,17 @@
 
+start()
+
+
+
+
+
 async function start() {
   const response = await fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit=10")
   const data = await response.json();
   for (let i = 0; i < data.length; i++) {
     createList(data[i]);
   }
-
 }
-
-// Creation d'articles via l'API
-
-start()
 
 function createList(list) {
   let container = document.createElement("div");
@@ -49,8 +50,16 @@ window.onclick = function (event) {
       }
     }
   }
-} 
+}
 
+let fname = document.querySelector('.title').value;
+console.log(fname);
+
+let lname = document.querySelector('#link').value;
+console.log(lname);
+
+let email = document.querySelector('#desc').value;
+console.log(email);
 
 
 // <--- Stockage commentaires ---> \\
