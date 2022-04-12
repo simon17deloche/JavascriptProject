@@ -1,9 +1,9 @@
 
 start()
 
-
-
-
+var titre = document.getElementById("title");
+let fname = document.querySelector('#title').value;
+console.log(fname);
 
 async function start() {
   const response = await fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit=10")
@@ -29,7 +29,6 @@ function createList(list) {
   container.appendChild(titre);
   container.appendChild(img);
   cible.appendChild(container);
-  return
 }
 
 // 
@@ -52,14 +51,33 @@ window.onclick = function (event) {
   }
 }
 
-let fname = document.querySelector('.title').value;
-console.log(fname);
+//document.querySelector('#publish').onclick = createPost;
+document.querySelector('#publish').addEventListener("click",createPost);
 
-let lname = document.querySelector('#link').value;
-console.log(lname);
+function createPost(event) {
+  event.preventDefault()
+  console.log('verif');
+  let fname = document.querySelector('#title').value;
+  let lname = document.querySelector('#link').value;
+  let email = document.querySelector('#desc').value;
 
-let email = document.querySelector('#desc').value;
-console.log(email);
+  let container = document.createElement("div");
+  container.classList.add("container");
+  container.classList.add("card");
+
+  let titre = document.createElement("h3");
+  titre.innerText = fname;
+
+  let img = document.createElement("img");
+  img.setAttribute("src", lname);
+
+  let cible = document.getElementById("testeur");
+
+  container.appendChild(titre);
+  container.appendChild(img);
+  cible.appendChild(container);
+}
+
 
 
 // <--- Stockage commentaires ---> \\
