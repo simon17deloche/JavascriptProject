@@ -6,7 +6,8 @@
   background-image: url("/images/image2.jpg");
   top: 0;
   position: sticky;
-  width: 100%
+  width: 100%;
+  z-index: 5;
 }
 
 /* Définition des couleur et placement pour le header */
@@ -77,10 +78,14 @@
 
 /* Le bloc qui contient les images du Carrousel */
 .slideshow-container {
-  max-width: 1000px;              /* Taille du bloc en pixels */
-  position: relative;             /* Placement du bloc */
-  margin: auto;                   /* Ne pas oublier de les modifier pour le responsive */
-  justify-content: center;        /* Garder le bloc au milieu de la page */
+  max-width: 1000px;
+  /* Taille du bloc en pixels */
+  position: relative;
+  /* Placement du bloc */
+  margin: auto;
+  /* Ne pas oublier de les modifier pour le responsive */
+  justify-content: center;
+  /* Garder le bloc au milieu de la page */
 }
 
 /* Affiche la première image par défaut */
@@ -170,4 +175,22 @@
 
 .space {
   margin-top: 50px;
+}
+
+.main_grille {
+  border: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main_grille img {
+  width:400px;
+  height: 300px;
+
+}
+
+hr {
+  border-width: 2px;
+  margin-right: 10%;
+  margin-left: 10%;
 }
